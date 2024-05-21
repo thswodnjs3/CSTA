@@ -1,7 +1,7 @@
 # CSTA: CNN-based Spatiotemporal Attention for Video Summarization (CVPR 2024 paper)
 The official code of "[CSTA: CNN-based Spatiotemporal Attention for Video Summarization](https://arxiv.org/abs/2405.11905)" <br/>
 
-#  ★ Please wait... additional codes and explanations are continually updated... ★
+# ★★★★★★★★★★★★★★ <br/> Please wait... additional codes and explanations are continually updated... <br/> ★★★★★★★★★★★★★★
 
 # Requirements
 |Ubuntu|GPU|CUDA|cuDNN|conda|python|
@@ -58,3 +58,30 @@ The structure of the directory must be like below. <br/>
          ├── split4.pt
          ├── split5.pt
 ```
+
+# Training
+You can train the final version of our models like below. <br/>
+```
+python train.py
+```
+## You can't reproduce our result perfectly.
+As shown in the paper, we tested every experiment 10 times without fixation of the seed, so we can't be sure which seeds export the same results. <br/>
+Even though you set the seed 123456, which is the same as our pre-trained models, it may result in different results due to the non-deterministic property of the [Adaptive Average Pooling layer](https://pytorch.org/docs/stable/generated/torch.use_deterministic_algorithms.html#torch.use_deterministic_algorithms). <br/>
+Based on my knowledge, non-deterministic operations produce random results even with the same seed. [You can see details here.](https://pytorch.org/docs/stable/notes/randomness.html) <br/>
+However, you can get similar results with the pre-trained models when you set the seed as 123456, so I hope this will be helpful for you.
+
+# Inference
+You can see the final performance of the models by command below. <br/>
+```
+python inference.py
+```
+All weight files should be located in the position I said above. <br/>
+
+# Acknowledgement
+PGL-SUM - [paper](https://www.iti.gr/~bmezaris/publications/ism2021a_preprint.pdf), [code](https://github.com/e-apostolidis/PGL-SUM) <br/>
+CA-SUM - [paper](https://www.iti.gr/~bmezaris/publications/icmr2022_preprint.pdf), [code](https://github.com/e-apostolidis/CA-SUM) <br/>
+VASNet - [paper](https://arxiv.org/pdf/1812.01969), [code](https://github.com/ok1zjf/VASNet) <br/>
+A2Summ - [paper](https://arxiv.org/pdf/2303.07284), [code](https://github.com/boheumd/A2Summ) <br/>
+MSVA - [paper](https://arxiv.org/pdf/2104.11530), [code](https://github.com/TIBHannover/MSVA) <br/>
+iPTNet - [paper](https://openaccess.thecvf.com/content/CVPR2022/papers/Jiang_Joint_Video_Summarization_and_Moment_Localization_by_Cross-Task_Sample_Transfer_CVPR_2022_paper.pdf) <br/>
+RR-STG - [paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9750933&tag=1)
