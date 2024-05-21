@@ -14,6 +14,7 @@ The official code of "CSTA: CNN-based Spatiotemporal Attention for Video Summari
 
 ```
 conda create -n CSTA python=3.8.5
+conda activate CSTA
 git clone https://github.com/thswodnjs3/CSTA.git
 cd CSTA
 pip install -r requirements.txt
