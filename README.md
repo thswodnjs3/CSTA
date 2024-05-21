@@ -80,18 +80,30 @@ All weight files should be located in the position I said above. <br/>
 # Citation
 If you find our code or our paper useful for your research, please [★star] this repo and [cite] the following paper:
 ```
-
+@misc{son2024csta,
+      title={CSTA: CNN-based Spatiotemporal Attention for Video Summarization}, 
+      author={Jaewon Son and Jaehun Park and Kwangsu Kim},
+      year={2024},
+      eprint={2405.11905},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
 ```
 
 # Acknowledgement
+We especially, sincerely appreciate the authors of PosENet, RR-STG who responded to our requests very kindly. <br/>
+Below are the papers we reference. <br/>
+
 A2Summ - [paper](https://arxiv.org/pdf/2303.07284), [code](https://github.com/boheumd/A2Summ) <br/>
 CA-SUM - [paper](https://www.iti.gr/~bmezaris/publications/icmr2022_preprint.pdf), [code](https://github.com/e-apostolidis/CA-SUM) <br/>
 DSNet - [paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9275314), [code](https://github.com/li-plus/DSNet) <br/>
 iPTNet - [paper](https://openaccess.thecvf.com/content/CVPR2022/papers/Jiang_Joint_Video_Summarization_and_Moment_Localization_by_Cross-Task_Sample_Transfer_CVPR_2022_paper.pdf) <br/>
 MSVA - [paper](https://arxiv.org/pdf/2104.11530), [code](https://github.com/TIBHannover/MSVA) <br/>
 PGL-SUM - [paper](https://www.iti.gr/~bmezaris/publications/ism2021a_preprint.pdf), [code](https://github.com/e-apostolidis/PGL-SUM) <br/>
+PosENet - [paper](https://arxiv.org/pdf/2001.08248), [code](https://github.com/islamamirul/position_information) <br/>
 RR-STG - [paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9750933&tag=1) <br/>
 SSPVS - [paper](https://arxiv.org/pdf/2201.02494), [code](https://github.com/HopLee6/SSPVS-PyTorch) <br/>
+STVT - [paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10124837), [code](https://github.com/nchucvml/STVT) <br/>
 VASNet - [paper](https://arxiv.org/pdf/1812.01969), [code](https://github.com/ok1zjf/VASNet) <br/>
 VJMHT - [paper](https://arxiv.org/pdf/2112.13478), [code](https://github.com/HopLee6/VJMHT-PyTorch) <br/>
 
@@ -128,5 +140,88 @@ series = {ICMR '22}
   volume={30},
   pages={948--962},
   year={2020}
+}
+```
+```
+@inproceedings{jiang2022joint,
+  title={Joint video summarization and moment localization by cross-task sample transfer},
+  author={Jiang, Hao and Mu, Yadong},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={16388--16398},
+  year={2022}
+}
+```
+```
+@article{ghauri2021MSVA, 
+   title={SUPERVISED VIDEO SUMMARIZATION VIA MULTIPLE FEATURE SETS WITH PARALLEL ATTENTION},
+   author={Ghauri, Junaid Ahmed and Hakimov, Sherzod and Ewerth, Ralph}, 
+   Conference={IEEE International Conference on Multimedia and Expo (ICME)}, 
+   year={2021} 
+}
+```
+```
+@INPROCEEDINGS{9666088,
+    author    = {Apostolidis, Evlampios and Balaouras, Georgios and Mezaris, Vasileios and Patras, Ioannis},
+    title     = {Combining Global and Local Attention with Positional Encoding for Video Summarization},
+    booktitle = {2021 IEEE International Symposium on Multimedia (ISM)},
+    month     = {December},
+    year      = {2021},
+    pages     = {226-234}
+}
+```
+```
+  @InProceedings{islam2020position,
+   title={How much Position Information Do Convolutional Neural Networks Encode?},
+   author={Islam, Md Amirul and Jia, Sen and Bruce, Neil},
+   booktitle={International Conference on Learning Representations},
+   year={2020}
+ }
+```
+```
+@article{zhu2022relational,
+  title={Relational reasoning over spatial-temporal graphs for video summarization},
+  author={Zhu, Wencheng and Han, Yucheng and Lu, Jiwen and Zhou, Jie},
+  journal={IEEE Transactions on Image Processing},
+  volume={31},
+  pages={3017--3031},
+  year={2022},
+  publisher={IEEE}
+}
+```
+```
+@inproceedings{li2023progressive,
+  title={Progressive Video Summarization via Multimodal Self-supervised Learning},
+  author={Li, Haopeng and Ke, Qiuhong and Gong, Mingming and Drummond, Tom},
+  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},
+  pages={5584--5593},
+  year={2023}
+}
+```
+```
+@article{hsu2023video,
+  title={Video summarization with spatiotemporal vision transformer},
+  author={Hsu, Tzu-Chun and Liao, Yi-Sheng and Huang, Chun-Rong},
+  journal={IEEE Transactions on Image Processing},
+  year={2023},
+  publisher={IEEE}
+}
+```
+```
+@misc{fajtl2018summarizing,
+    title={Summarizing Videos with Attention},
+    author={Jiri Fajtl and Hajar Sadeghi Sokeh and Vasileios Argyriou and Dorothy Monekosso and Paolo Remagnino},
+    year={2018},
+    eprint={1812.01969},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
+}
+```
+```
+@article{li2022video,
+  title={Video Joint Modelling Based on Hierarchical Transformer for Co-summarization},
+  author={Li, Haopeng and Ke, Qiuhong and Gong, Mingming and Zhang, Rui},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  year={2022},
+  publisher={IEEE}
 }
 ```
