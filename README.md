@@ -121,19 +121,19 @@ VJMHT - [paper](https://arxiv.org/pdf/2112.13478), [code](https://github.com/Hop
 ```
 ```
 @inproceedings{10.1145/3512527.3531404,
-author = {Apostolidis, Evlampios and Balaouras, Georgios and Mezaris, Vasileios and Patras, Ioannis},
-title = {Summarizing Videos Using Concentrated Attention and Considering the Uniqueness and Diversity of the Video Frames},
-year = {2022},
-isbn = {9781450392389},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-url = {https://doi.org/10.1145/3512527.3531404},
-doi = {10.1145/3512527.3531404},
-pages = {407-415},
-numpages = {9},
-keywords = {frame diversity, frame uniqueness, concentrated attention, unsupervised learning, video summarization},
-location = {Newark, NJ, USA},
-series = {ICMR '22}
+  author = {Apostolidis, Evlampios and Balaouras, Georgios and Mezaris, Vasileios and Patras, Ioannis},
+  title = {Summarizing Videos Using Concentrated Attention and Considering the Uniqueness and Diversity of the Video Frames},
+  year = {2022},
+  isbn = {9781450392389},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/3512527.3531404},
+  doi = {10.1145/3512527.3531404},
+  pages = {407-415},
+  numpages = {9},
+  keywords = {frame diversity, frame uniqueness, concentrated attention, unsupervised learning, video summarization},
+  location = {Newark, NJ, USA},
+  series = {ICMR '22}
 }
 ```
 ```
