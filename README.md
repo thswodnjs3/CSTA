@@ -92,7 +92,7 @@ If you find our code or our paper useful for your research, please [★star] thi
 
 # Acknowledgement
 We especially, sincerely appreciate the authors of PosENet, RR-STG who responded to our requests very kindly. <br/>
-Below are the papers we reference. <br/>
+Below are the papers we referenced for the code. <br/>
 
 A2Summ - [paper](https://arxiv.org/pdf/2303.07284), [code](https://github.com/boheumd/A2Summ) <br/>
 CA-SUM - [paper](https://www.iti.gr/~bmezaris/publications/icmr2022_preprint.pdf), [code](https://github.com/e-apostolidis/CA-SUM) <br/>
