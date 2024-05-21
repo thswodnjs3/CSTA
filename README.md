@@ -1,5 +1,6 @@
 # CSTA: CNN-based Spatiotemporal Attention for Video Summarization (CVPR 2024 paper)
-The official code of "CSTA: CNN-based Spatiotemporal Attention for Video Summarization"
+The official code of "CSTA: CNN-based Spatiotemporal Attention for Video Summarization" <br/>
+[arXiv](https://arxiv.org/abs/2405.11905) <br/>
 
 # Additional codes and explanations are continually updated...
 
