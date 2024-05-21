@@ -78,10 +78,13 @@ python inference.py
 All weight files should be located in the position I said above. <br/>
 
 # Acknowledgement
-PGL-SUM - [paper](https://www.iti.gr/~bmezaris/publications/ism2021a_preprint.pdf), [code](https://github.com/e-apostolidis/PGL-SUM) <br/>
-CA-SUM - [paper](https://www.iti.gr/~bmezaris/publications/icmr2022_preprint.pdf), [code](https://github.com/e-apostolidis/CA-SUM) <br/>
-VASNet - [paper](https://arxiv.org/pdf/1812.01969), [code](https://github.com/ok1zjf/VASNet) <br/>
 A2Summ - [paper](https://arxiv.org/pdf/2303.07284), [code](https://github.com/boheumd/A2Summ) <br/>
-MSVA - [paper](https://arxiv.org/pdf/2104.11530), [code](https://github.com/TIBHannover/MSVA) <br/>
+CA-SUM - [paper](https://www.iti.gr/~bmezaris/publications/icmr2022_preprint.pdf), [code](https://github.com/e-apostolidis/CA-SUM) <br/>
+DSNet - [paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9275314), [code](https://github.com/li-plus/DSNet) <br/>
 iPTNet - [paper](https://openaccess.thecvf.com/content/CVPR2022/papers/Jiang_Joint_Video_Summarization_and_Moment_Localization_by_Cross-Task_Sample_Transfer_CVPR_2022_paper.pdf) <br/>
-RR-STG - [paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9750933&tag=1)
+MSVA - [paper](https://arxiv.org/pdf/2104.11530), [code](https://github.com/TIBHannover/MSVA) <br/>
+PGL-SUM - [paper](https://www.iti.gr/~bmezaris/publications/ism2021a_preprint.pdf), [code](https://github.com/e-apostolidis/PGL-SUM) <br/>
+RR-STG - [paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9750933&tag=1) <br/>
+SSPVS - [paper](https://arxiv.org/pdf/2201.02494), [code](https://github.com/HopLee6/SSPVS-PyTorch) <br/>
+VASNet - [paper](https://arxiv.org/pdf/1812.01969), [code](https://github.com/ok1zjf/VASNet) <br/>
+VJMHT - [paper](https://arxiv.org/pdf/2112.13478), [code](https://github.com/HopLee6/VJMHT-PyTorch) <br/>
