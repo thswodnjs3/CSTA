@@ -1,7 +1,9 @@
 # CSTA: CNN-based Spatiotemporal Attention for Video Summarization (CVPR 2024 paper)
 The official code of "[CSTA: CNN-based Spatiotemporal Attention for Video Summarization](https://arxiv.org/abs/2405.11905)" <br/>
+![image](https://github.com/thswodnjs3/CSTA/assets/93433004/aa0dff4d-9b29-49a2-989a-5b6a12dba5fe)
 
-# ★★★★★★★★★★★★★★ <br/> Please wait... additional codes and explanations are continually updated... <br/> ★★★★★★★★★★★★★★
+# Model overview
+![image](https://github.com/thswodnjs3/CSTA/assets/93433004/537b7375-10d7-4d7d-8de0-0b69631ac635)
 
 # Requirements
 |Ubuntu|GPU|CUDA|cuDNN|conda|python|
@@ -60,10 +62,12 @@ The structure of the directory must be like below. <br/>
 ```
 
 # Training
-You can train the final version of our models like below. <br/>
+You can train the final version of our models by command below. <br/>
 ```
 python train.py
 ```
+Detailed explanations for all configurations will be updated later. <br/>
+
 ## You can't reproduce our result perfectly.
 As shown in the paper, we tested every experiment 10 times without fixation of the seed, so we can't be sure which seeds export the same results. <br/>
 Even though you set the seed 123456, which is the same as our pre-trained models, it may result in different results due to the non-deterministic property of the [Adaptive Average Pooling layer](https://pytorch.org/docs/stable/generated/torch.use_deterministic_algorithms.html#torch.use_deterministic_algorithms). <br/>
