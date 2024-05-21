@@ -77,6 +77,12 @@ python inference.py
 ```
 All weight files should be located in the position I said above. <br/>
 
+# Citation
+If you find our code or our paper useful for your research, please [★star] this repo and [cite] the following paper:
+```
+
+```
+
 # Acknowledgement
 A2Summ - [paper](https://arxiv.org/pdf/2303.07284), [code](https://github.com/boheumd/A2Summ) <br/>
 CA-SUM - [paper](https://www.iti.gr/~bmezaris/publications/icmr2022_preprint.pdf), [code](https://github.com/e-apostolidis/CA-SUM) <br/>
@@ -88,3 +94,39 @@ RR-STG - [paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=975093
 SSPVS - [paper](https://arxiv.org/pdf/2201.02494), [code](https://github.com/HopLee6/SSPVS-PyTorch) <br/>
 VASNet - [paper](https://arxiv.org/pdf/1812.01969), [code](https://github.com/ok1zjf/VASNet) <br/>
 VJMHT - [paper](https://arxiv.org/pdf/2112.13478), [code](https://github.com/HopLee6/VJMHT-PyTorch) <br/>
+
+```
+@inproceedings{he2023a2summ,
+  title = {Align and Attend: Multimodal Summarization with Dual Contrastive Losses},
+  author={He, Bo and Wang, Jun and Qiu, Jielin and Bui, Trung and Shrivastava, Abhinav and Wang, Zhaowen},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year = {2023}
+}
+```
+```
+@inproceedings{10.1145/3512527.3531404,
+author = {Apostolidis, Evlampios and Balaouras, Georgios and Mezaris, Vasileios and Patras, Ioannis},
+title = {Summarizing Videos Using Concentrated Attention and Considering the Uniqueness and Diversity of the Video Frames},
+year = {2022},
+isbn = {9781450392389},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3512527.3531404},
+doi = {10.1145/3512527.3531404},
+pages = {407-415},
+numpages = {9},
+keywords = {frame diversity, frame uniqueness, concentrated attention, unsupervised learning, video summarization},
+location = {Newark, NJ, USA},
+series = {ICMR '22}
+}
+```
+```
+@article{zhu2020dsnet,
+  title={DSNet: A Flexible Detect-to-Summarize Network for Video Summarization},
+  author={Zhu, Wencheng and Lu, Jiwen and Li, Jiahao and Zhou, Jie},
+  journal={IEEE Transactions on Image Processing},
+  volume={30},
+  pages={948--962},
+  year={2020}
+}
+```
