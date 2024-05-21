@@ -1,4 +1,7 @@
 # CSTA: CNN-based Spatiotemporal Attention for Video Summarization (CVPR 2024 paper)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/csta-cnn-based-spatiotemporal-attention-for/supervised-video-summarization-on-summe)](https://paperswithcode.com/sota/supervised-video-summarization-on-summe?p=csta-cnn-based-spatiotemporal-attention-for) <br/>
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/csta-cnn-based-spatiotemporal-attention-for/supervised-video-summarization-on-tvsum)](https://paperswithcode.com/sota/supervised-video-summarization-on-tvsum?p=csta-cnn-based-spatiotemporal-attention-for) <br/>
+
 The official code of "[CSTA: CNN-based Spatiotemporal Attention for Video Summarization](https://arxiv.org/abs/2405.11905)" <br/>
 ![image](https://github.com/thswodnjs3/CSTA/assets/93433004/aa0dff4d-9b29-49a2-989a-5b6a12dba5fe)
 
