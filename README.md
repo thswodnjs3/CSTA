@@ -2,7 +2,7 @@
 The official code of "CSTA: CNN-based Spatiotemporal Attention for Video Summarization" <br/>
 [arXiv](https://arxiv.org/abs/2405.11905) <br/>
 
-# Additional codes and explanations are continually updated...
+#  ★ Please wait... additional codes and explanations are continually updated... ★
 
 # Requirements
 |Ubuntu|GPU|CUDA|cuDNN|conda|python|
