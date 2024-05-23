@@ -177,7 +177,7 @@ VJMHT - [paper](https://arxiv.org/pdf/2112.13478), [code](https://github.com/Hop
 }
 ```
 ```
-  @InProceedings{islam2020position,
+@InProceedings{islam2020position,
    title={How much Position Information Do Convolutional Neural Networks Encode?},
    author={Islam, Md Amirul and Jia, Sen and Bruce, Neil},
    booktitle={International Conference on Learning Representations},
