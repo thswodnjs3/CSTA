@@ -85,7 +85,7 @@ python inference.py
 All weight files should be located in the position I said above. <br/>
 
 # Citation
-If you find our code or our paper useful for your research, please [★star] this repo and [cite] the following paper:
+If you find our code or our paper useful, please click [★star] for this repo and [cite] the following paper:
 ```
 @article{son2024csta,
   title={CSTA: CNN-based Spatiotemporal Attention for Video Summarization},
