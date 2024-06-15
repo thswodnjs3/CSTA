@@ -87,10 +87,11 @@ All weight files should be located in the position I said above. <br/>
 # Citation
 If you find our code or our paper useful, please click [★star] for this repo and [cite] the following paper:
 ```
-@article{son2024csta,
+@inproceedings{son2024csta,
   title={CSTA: CNN-based Spatiotemporal Attention for Video Summarization},
   author={Son, Jaewon and Park, Jaehun and Kim, Kwangsu},
-  journal={arXiv preprint arXiv:2405.11905},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={18847--18856},
   year={2024}
 }
 ```
