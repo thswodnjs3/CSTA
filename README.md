@@ -103,19 +103,44 @@ All weight files should be located in the position I said above. <br/>
 # Generate summary videos
 You can generate summary videos by using our models. <br/>
 You can use either videos in public datasets or custom videos. <br/>
-'''
-input_is_file (bool): True or False
-    -Whether the input is file or directory
-file_path (str) e.g. './SumMe/Jumps.mp4'
-    -The path of the video file.
-     This is only available when 'input_is_file' is True.
-dir_path (str) e.g. './SumMe'
-    -The path of the directory where video files are located.
-     This is only available when 'input_is_file' is False.
-ext (str) e.g. 'mp4'
-    -The abbreviation of extensions of the video files.
+With the code below, you can apply our pre-trained models to raw videos to produce summary videos.<br/>
+```
+python generate_video.py --input_is_file True_or_False
+    --file_path 'path to input video'
+    --dir_path 'directory of input videos'
+    --ext 'video file extension'
+    --save_path 'path to save summary video'
+    --weight_path 'path to loaded weights'
+```
+The explanation of the arguments is as follows.
+```
+1. input_is_file (bool): True or False
+    Indicates whether the input is a file or a directory.
+    If this is True, the 'file_path' argument is required.
+    If this is False, the 'dir_path' and 'ext' arguments are required.
 
-'''
+2. file_path (str) e.g. './SumMe/Jumps.mp4'
+    The path of the video file.
+    This is only used when 'input_is_file' is True.
+
+3. dir_path (str) e.g. './SumMe'
+    The path of the directory where video files are located.
+    This is only used when 'input_is_file' is False.
+
+4. ext (str) e.g. 'mp4'
+    The file extension of the video files.
+    This is only used when 'input_is_file' is True.
+
+5. sample_rate (int) e.g. 15
+    The interval between selected frames in a video.
+    For example, if the video has 30 fps, it will become 2 fps with a sample_rate of 15.
+
+6. save_path (str) e.g. './summary_videos'
+    The path where the summary videos are saved.
+
+7. weight_path (str) e.g. './weights/SumMe/split4.pt'
+    The path where the model weights are loaded from.
+```
 
 # Citation
 If you find our code or our paper useful, please click [★star] for this repo and [cite] the following paper:
