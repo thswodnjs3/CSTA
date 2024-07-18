@@ -141,6 +141,9 @@ The explanation of the arguments is as follows.
 7. weight_path (str) e.g. './weights/SumMe/split4.pt'
     The path where the model weights are loaded from.
 ```
+We referenced the KTS code from [DSNet](https://github.com/li-plus/DSNet).<br/>
+However, they applied KTS to downsampled videos (2 fps), which can result in different shot change points and sometimes make it impossible to summarize videos. <br/>
+Later, I will update the KTS algorithm to apply to all frames of the videos. <br/>
 
 # Citation
 If you find our code or our paper useful, please click [★star] for this repo and [cite] the following paper:
