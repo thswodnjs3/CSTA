@@ -131,7 +131,7 @@ The explanation of the arguments is as follows.
 
 4. ext (str) e.g. 'mp4'
     The file extension of the video files.
-    This is only used when 'input_is_file' is True.
+    This is only used when 'input_is_file' is False.
 
 5. sample_rate (int) e.g. 15
     The interval between selected frames in a video.
