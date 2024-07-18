@@ -1,3 +1,5 @@
+This code is from [DS-Net](https://github.com/li-plus/DSNet.git). <br/>
+
 Kernel temporal segmentation
 ============================
 
