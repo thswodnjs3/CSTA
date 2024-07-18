@@ -23,6 +23,8 @@ The official code of "[CSTA: CNN-based Spatiotemporal Attention for Video Summar
  * [2024.03.24] Create a repository.
  * [2024.05.21] Update the code and pre-trained models.
  * [2024.07.18] Upload the code to generate summary videos, including custom videos.
+ * (Yet) [2024.07.??] Update the KTS code for full frames of videos.
+ * (Yet) [2024.08.??] Add detailed explanations for the code.
 
 # Requirements
 |Ubuntu|GPU|CUDA|cuDNN|conda|python|
