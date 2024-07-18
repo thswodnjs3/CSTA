@@ -26,7 +26,8 @@ class Config(object):
         for k, v in kwargs.items():
             setattr(self, k, v)
 
-        self.datasets = ['SumMe','TVSum']
+        # self.datasets = ['SumMe','TVSum']
+        self.datasets = ['SumMe']
         self.SumMe_len = 25
         self.TVSum_len = 50
 
@@ -76,6 +77,15 @@ def get_config(parse=True, **optional_kwargs):
     parser.add_argument('--key_value_emb', type=str2none, default='kv')
     parser.add_argument('--Skip_connection', type=str2none, default='KC')
     parser.add_argument('--Layernorm', type=str2bool, default=True)
+
+    # Generate summary videos
+    parser.add_argument('--input_is_file', type=str2bool, default='true')
+    parser.add_argument('--file_path', type=str, default='./SumMe/Jumps.mp4')
+    parser.add_argument('--dir_path', type=str, default='./SumMe')
+    parser.add_argument('--ext', type=str, default='mp4')
+    parser.add_argument('--sample_rate', type=int, default=15)
+    parser.add_argument('--save_path', type=str, default='./summary_videos')
+    parser.add_argument('--weight_path', type=str, default='./weights/SumMe/split4.pt')
 
     kwargs = vars(parser.parse_args())
     kwargs.update(optional_kwargs)
