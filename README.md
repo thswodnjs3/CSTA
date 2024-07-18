@@ -5,8 +5,24 @@
 The official code of "[CSTA: CNN-based Spatiotemporal Attention for Video Summarization](https://arxiv.org/abs/2405.11905)" <br/>
 ![image](https://github.com/thswodnjs3/CSTA/assets/93433004/aa0dff4d-9b29-49a2-989a-5b6a12dba5fe)
 
+ * [Model overview](https://github.com/thswodnjs3/CSTA?tab=readme-ov-file#model-overview)
+ * [Updates](https://github.com/thswodnjs3/CSTA/edit/master/README.md#updates)
+ * [Requirements](https://github.com/thswodnjs3/CSTA?tab=readme-ov-file#requirements)
+ * [Data](https://github.com/thswodnjs3/CSTA?tab=readme-ov-file#data)
+ * [Pre-trained models](https://github.com/thswodnjs3/CSTA?tab=readme-ov-file#pre-trained-models)
+ * [Training](https://github.com/thswodnjs3/CSTA?tab=readme-ov-file#training)
+ * [Inference](https://github.com/thswodnjs3/CSTA?tab=readme-ov-file#inference)
+ * [Generate summary videos](https://github.com/thswodnjs3/CSTA/edit/master/README.md#generate-summary-videos)
+ * [Citation](https://github.com/thswodnjs3/CSTA?tab=readme-ov-file#citation)
+ * [Acknowledgement](https://github.com/thswodnjs3/CSTA?tab=readme-ov-file#acknowledgement)
+
 # Model overview
 ![image](https://github.com/thswodnjs3/CSTA/assets/93433004/537b7375-10d7-4d7d-8de0-0b69631ac635)
+
+# Updates
+ * [2024.03.24] Create a repository.
+ * [2024.05.21] Update the code and pre-trained models.
+ * [2024.07.18] Upload the code to generate summary videos, including custom videos.
 
 # Requirements
 |Ubuntu|GPU|CUDA|cuDNN|conda|python|
@@ -83,6 +99,23 @@ You can see the final performance of the models by command below. <br/>
 python inference.py
 ```
 All weight files should be located in the position I said above. <br/>
+
+# Generate summary videos
+You can generate summary videos by using our models. <br/>
+You can use either videos in public datasets or custom videos. <br/>
+'''
+input_is_file (bool): True or False
+    -Whether the input is file or directory
+file_path (str) e.g. './SumMe/Jumps.mp4'
+    -The path of the video file.
+     This is only available when 'input_is_file' is True.
+dir_path (str) e.g. './SumMe'
+    -The path of the directory where video files are located.
+     This is only available when 'input_is_file' is False.
+ext (str) e.g. 'mp4'
+    -The abbreviation of extensions of the video files.
+
+'''
 
 # Citation
 If you find our code or our paper useful, please click [★star] for this repo and [cite] the following paper:
