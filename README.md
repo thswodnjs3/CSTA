@@ -103,9 +103,9 @@ python inference.py
 All weight files should be located in the position I said above. <br/>
 
 # Generate summary videos
-You can generate summary videos by using our models. <br/>
-You can use either videos in public datasets or custom videos. <br/>
-With the code below, you can apply our pre-trained models to raw videos to produce summary videos.<br/>
+You can generate summary videos using our models. <br/>
+You can use either videos from public datasets or custom videos. <br/>
+With the code below, you can apply our pre-trained models to raw videos to produce summary videos. <br/>
 ```
 python generate_video.py --input_is_file True_or_False
     --file_path 'path to input video'
