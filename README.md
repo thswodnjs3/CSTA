@@ -6,13 +6,13 @@ The official code of "[CSTA: CNN-based Spatiotemporal Attention for Video Summar
 ![image](https://github.com/thswodnjs3/CSTA/assets/93433004/aa0dff4d-9b29-49a2-989a-5b6a12dba5fe)
 
  * [Model overview](https://github.com/thswodnjs3/CSTA?tab=readme-ov-file#model-overview)
- * [Updates](https://github.com/thswodnjs3/CSTA/edit/master/README.md#updates)
+ * [Updates](https://github.com/thswodnjs3/CSTA?tab=readme-ov-file#updates)
  * [Requirements](https://github.com/thswodnjs3/CSTA?tab=readme-ov-file#requirements)
  * [Data](https://github.com/thswodnjs3/CSTA?tab=readme-ov-file#data)
  * [Pre-trained models](https://github.com/thswodnjs3/CSTA?tab=readme-ov-file#pre-trained-models)
  * [Training](https://github.com/thswodnjs3/CSTA?tab=readme-ov-file#training)
  * [Inference](https://github.com/thswodnjs3/CSTA?tab=readme-ov-file#inference)
- * [Generate summary videos](https://github.com/thswodnjs3/CSTA/edit/master/README.md#generate-summary-videos)
+ * [Generate summary videos](https://github.com/thswodnjs3/CSTA?tab=readme-ov-file#generate-summary-videos)
  * [Citation](https://github.com/thswodnjs3/CSTA?tab=readme-ov-file#citation)
  * [Acknowledgement](https://github.com/thswodnjs3/CSTA?tab=readme-ov-file#acknowledgement)
 
