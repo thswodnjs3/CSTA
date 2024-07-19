@@ -17,7 +17,9 @@ The official code of "[CSTA: CNN-based Spatiotemporal Attention for Video Summar
  * [Acknowledgement](https://github.com/thswodnjs3/CSTA?tab=readme-ov-file#acknowledgement)
 
 # Model overview
-![image](https://github.com/thswodnjs3/CSTA/assets/93433004/537b7375-10d7-4d7d-8de0-0b69631ac635)
+![image](https://github.com/thswodnjs3/CSTA/assets/93433004/537b7375-10d7-4d7d-8de0-0b69631ac635) <br/>
+<br/>
+[Back to top](https://github.com/thswodnjs3/CSTA?tab=readme-ov-file#csta-cnn-based-spatiotemporal-attention-for-video-summarization-cvpr-2024-paper)↑
 
 # Updates
  * [2024.03.24] Create a repository.
@@ -25,6 +27,8 @@ The official code of "[CSTA: CNN-based Spatiotemporal Attention for Video Summar
  * [2024.07.18] Upload the code to generate summary videos, including custom videos.
  * (Yet) [2024.07.??] Update the KTS code for full frames of videos.
  * (Yet) [2024.08.??] Add detailed explanations for the code.
+
+[Back to top](https://github.com/thswodnjs3/CSTA?tab=readme-ov-file#csta-cnn-based-spatiotemporal-attention-for-video-summarization-cvpr-2024-paper)↑
 
 # Requirements
 |Ubuntu|GPU|CUDA|cuDNN|conda|python|
@@ -43,6 +47,8 @@ cd CSTA
 pip install -r requirements.txt
 ```
 
+[Back to top](https://github.com/thswodnjs3/CSTA?tab=readme-ov-file#csta-cnn-based-spatiotemporal-attention-for-video-summarization-cvpr-2024-paper)↑
+
 # Data
 Link: [Dataset](https://drive.google.com/drive/folders/1iGfKZxexQfOxyIaOWhfU0P687dJq_KWF?usp=drive_link) <br/>
 H5py format of two benchmark video summarization preprocessed datasets (SumMe, TVSum). <br/>
@@ -57,6 +63,8 @@ You can see the details of both datasets below. <br/>
 
 [SumMe](https://link.springer.com/chapter/10.1007/978-3-319-10584-0_33) <br/>
 [TVSum](https://openaccess.thecvf.com/content_cvpr_2015/papers/Song_TVSum_Summarizing_Web_2015_CVPR_paper.pdf) <br/>
+<br/>
+[Back to top](https://github.com/thswodnjs3/CSTA?tab=readme-ov-file#csta-cnn-based-spatiotemporal-attention-for-video-summarization-cvpr-2024-paper)↑
 
 # Pre-trained models
 Link: [Weights](https://drive.google.com/drive/folders/1Z0WV_IJAHXV16sAGW7TmC9J_iFZQ9NSs?usp=drive_link) <br/>
@@ -82,6 +90,8 @@ The structure of the directory must be like below. <br/>
          ├── split5.pt
 ```
 
+[Back to top](https://github.com/thswodnjs3/CSTA?tab=readme-ov-file#csta-cnn-based-spatiotemporal-attention-for-video-summarization-cvpr-2024-paper)↑
+
 # Training
 You can train the final version of our models by command below. <br/>
 ```
@@ -93,7 +103,9 @@ Detailed explanations for all configurations will be updated later. <br/>
 As shown in the paper, we tested every experiment 10 times without fixation of the seed, so we can't be sure which seeds export the same results. <br/>
 Even though you set the seed 123456, which is the same as our pre-trained models, it may result in different results due to the non-deterministic property of the [Adaptive Average Pooling layer](https://pytorch.org/docs/stable/generated/torch.use_deterministic_algorithms.html#torch.use_deterministic_algorithms). <br/>
 Based on my knowledge, non-deterministic operations produce random results even with the same seed. [You can see details here.](https://pytorch.org/docs/stable/notes/randomness.html) <br/>
-However, you can get similar results with the pre-trained models when you set the seed as 123456, so I hope this will be helpful for you.
+However, you can get similar results with the pre-trained models when you set the seed as 123456, so I hope this will be helpful for you. <br/>
+<br/>
+[Back to top](https://github.com/thswodnjs3/CSTA?tab=readme-ov-file#csta-cnn-based-spatiotemporal-attention-for-video-summarization-cvpr-2024-paper)↑
 
 # Inference
 You can see the final performance of the models by command below. <br/>
@@ -101,6 +113,8 @@ You can see the final performance of the models by command below. <br/>
 python inference.py
 ```
 All weight files should be located in the position I said above. <br/>
+<br/>
+[Back to top](https://github.com/thswodnjs3/CSTA?tab=readme-ov-file#csta-cnn-based-spatiotemporal-attention-for-video-summarization-cvpr-2024-paper)↑
 
 # Generate summary videos
 You can generate summary videos using our models. <br/>
@@ -146,6 +160,8 @@ The explanation of the arguments is as follows.
 We referenced the KTS code from [DSNet](https://github.com/li-plus/DSNet).<br/>
 However, they applied KTS to downsampled videos (2 fps), which can result in different shot change points and sometimes make it impossible to summarize videos. <br/>
 Later, I will update the KTS algorithm to apply to all frames of the videos. <br/>
+<br/>
+[Back to top](https://github.com/thswodnjs3/CSTA?tab=readme-ov-file#csta-cnn-based-spatiotemporal-attention-for-video-summarization-cvpr-2024-paper)↑
 
 # Citation
 If you find our code or our paper useful, please click [★star] for this repo and [cite] the following paper:
@@ -158,6 +174,8 @@ If you find our code or our paper useful, please click [★star] for this repo a
   year={2024}
 }
 ```
+
+[Back to top](https://github.com/thswodnjs3/CSTA?tab=readme-ov-file#csta-cnn-based-spatiotemporal-attention-for-video-summarization-cvpr-2024-paper)↑
 
 # Acknowledgement
 We especially, sincerely appreciate the authors of PosENet, RR-STG who responded to our requests very kindly. <br/>
@@ -294,3 +312,5 @@ VJMHT - [paper](https://arxiv.org/pdf/2112.13478), [code](https://github.com/Hop
   publisher={IEEE}
 }
 ```
+
+[Back to top](https://github.com/thswodnjs3/CSTA?tab=readme-ov-file#csta-cnn-based-spatiotemporal-attention-for-video-summarization-cvpr-2024-paper)↑
