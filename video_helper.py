@@ -57,10 +57,9 @@ class VideoPreprocessor(object):
             if not ret:
                 break
 
-            if n_frames % self.sample_rate == 0:
-                frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-                feat = self.model.run(frame)
-                features.append(feat)
+            frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+            feat = self.model.run(frame)
+            features.append(feat)
                 
             n_frames += 1
 
@@ -70,20 +69,18 @@ class VideoPreprocessor(object):
 
     def kts(self, n_frames, features):
         seq_len = len(features)
-        picks = np.arange(0, seq_len) * self.sample_rate
+        picks = np.arange(0, seq_len)
 
         # compute change points using KTS
         kernel = np.matmul(features.clone().detach().cpu().numpy(), features.clone().detach().cpu().numpy().T)
         change_points, _ = cpd_auto(kernel, seq_len - 1, 1, verbose=False)
-        change_points *= self.sample_rate
         change_points = np.hstack((0, change_points, n_frames))
         begin_frames = change_points[:-1]
         end_frames = change_points[1:]
         change_points = np.vstack((begin_frames, end_frames - 1)).T
-
         return change_points, picks
 
     def run(self, video_path: PathLike):
         n_frames, features = self.get_features(video_path)
         cps, picks = self.kts(n_frames, features)
-        return n_frames, features, cps, picks
+        return n_frames, features[::self.sample_rate,:], cps, picks
