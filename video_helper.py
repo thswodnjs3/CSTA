@@ -83,4 +83,4 @@ class VideoPreprocessor(object):
     def run(self, video_path: PathLike):
         n_frames, features = self.get_features(video_path)
         cps, picks = self.kts(n_frames, features)
-        return n_frames, features[::self.sample_rate,:], cps, picks
+        return n_frames, features[::self.sample_rate,:], cps, picks[::self.sample_rate]
