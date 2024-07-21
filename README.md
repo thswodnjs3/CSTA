@@ -168,7 +168,7 @@ Additionally, you must update this when inputting a single video file with diffe
 ```
 We referenced the KTS code from [DSNet](https://github.com/li-plus/DSNet).<br/>
 However, they applied KTS to downsampled videos (2 fps), which can result in different shot change points and sometimes make it impossible to summarize videos. <br/>
-Later, I will update the KTS algorithm to apply to all frames of the videos. <br/>
+We revised it to calculate change points based on the entire frames. <br/>
 <br/>
 [Back to top](https://github.com/thswodnjs3/CSTA?tab=readme-ov-file#csta-cnn-based-spatiotemporal-attention-for-video-summarization-cvpr-2024-paper)↑
 
