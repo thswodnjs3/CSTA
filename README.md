@@ -121,7 +121,7 @@ You can generate summary videos using our models. <br/>
 You can use either videos from public datasets or custom videos. <br/>
 With the code below, you can apply our pre-trained models to raw videos to produce summary videos. <br/>
 ```
-python generate_video.py --input_is_file True_or_False
+python generate_video.py --input_is_file True or False
     --file_path 'path to input video'
     --dir_path 'directory of input videos'
     --ext 'video file extension'
