@@ -1,7 +1,6 @@
 # Reference code: https://github.com/li-plus/DSNet/blob/1804176e2e8b57846beb063667448982273fca89/src/make_dataset.py#L4
 # Reference code: https://github.com/e-apostolidis/PGL-SUM/blob/81d0d6d0ee0470775ad759087deebbce1ceffec3/model/configs.py#L10
 import cv2
-import h5py
 import torch
 
 from pathlib import Path
@@ -82,7 +81,6 @@ def main():
     model.eval()
 
     # Generate summarized videos
-    from collections import Counter
     with torch.no_grad():
         for video_path in tqdm(video_paths,total=len(video_paths),ncols=80,leave=False,desc="Making videos..."):
             video_name = video_path.stem
@@ -92,9 +90,8 @@ def main():
             inputs = inputs.unsqueeze(0).expand(3,-1,-1).unsqueeze(0)
             outputs = model(inputs)
             predictions = outputs.squeeze().clone().detach().cpu().numpy().tolist()
+            # print(cps.shape, len(predictions), n_frames, pick.shape)
             selections = generate_summary([cps], [predictions], [n_frames], [pick])[0]
-            if 1 not in selections:
-                continue
 
             frames = pick_frames(video_path=video_path, selections=selections)
             produce_video(
