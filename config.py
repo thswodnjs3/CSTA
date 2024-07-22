@@ -32,8 +32,7 @@ class Config(object):
         self.TVSum_len = 50
 
         # Set device
-        self.device = torch.device(self.device)
-        if 'cuda' in self.device:
+        if self.device!='cpu':
             torch.cuda.set_device(self.device)
 
         # Set seed
@@ -44,7 +43,7 @@ class Config(object):
         random.seed(self.seed)
         np.random.seed(self.seed)
         torch.manual_seed(self.seed)
-        if 'cuda' in self.device:
+        if self.device!='cpu':
             torch.cuda.manual_seed(self.seed)
             torch.cuda.manual_seed_all(self.seed)
         torch.backends.cudnn.benchmark = False
