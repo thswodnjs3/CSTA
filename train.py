@@ -12,13 +12,6 @@ from generate_summary import generate_summary
 from model import set_model
 from utils import report_params, print_args, get_gt
 
-# Check the usage of GPU
-if not torch.cuda.is_available():
-    print("GPU not available!")
-    device = torch.device('cpu')
-else:
-    device = torch.device('cuda:0')
-
 # Load configurations
 config = get_config()
 
@@ -71,7 +64,7 @@ for dataset in tqdm(config.datasets,total=len(config.datasets),ncols=70,leave=Tr
             Skip_connection=config.Skip_connection,
             Layernorm=config.Layernorm
         )
-        model.to(device)
+        model.to(config.device)
         criterion = torch.nn.MSELoss()
         optimizer = torch.optim.Adam(model.parameters(),lr=float(config.learning_rate),weight_decay=float(config.weight_decay))
 
@@ -84,8 +77,8 @@ for dataset in tqdm(config.datasets,total=len(config.datasets),ncols=70,leave=Tr
             batch = 0
 
             for feature,gtscore,dataset_name,video_num in tqdm(train_loader,ncols=70,leave=False,position=3,desc=f'Epoch{epoch+1}_TRAIN'):
-                feature = feature.to(device)
-                gtscore = gtscore.to(device)
+                feature = feature.to(config.device)
+                gtscore = gtscore.to(config.device)
                 output = model(feature)
 
                 loss = criterion(output,gtscore) 
@@ -115,8 +108,8 @@ for dataset in tqdm(config.datasets,total=len(config.datasets),ncols=70,leave=Tr
             model.eval()
             with torch.no_grad():
                 for feature,gtscore,dataset_name,video_num in tqdm(test_loader,ncols=70,leave=False,position=3,desc=f'Epoch{epoch+1}_TEST'):
-                    feature = feature.to(device)
-                    gtscore = gtscore.to(device)
+                    feature = feature.to(config.device)
+                    gtscore = gtscore.to(config.device)
                     output = model(feature)
 
                     if dataset_name in ['SumMe','TVSum']:
