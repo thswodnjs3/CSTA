@@ -33,7 +33,8 @@ class Config(object):
 
         # Set device
         self.device = torch.device(self.device)
-        torch.cuda.set_device(self.device)
+        if 'cuda' in self.device:
+            torch.cuda.set_device(self.device)
 
         # Set seed
         self.set_seed()
@@ -43,8 +44,9 @@ class Config(object):
         random.seed(self.seed)
         np.random.seed(self.seed)
         torch.manual_seed(self.seed)
-        torch.cuda.manual_seed(self.seed)
-        torch.cuda.manual_seed_all(self.seed)
+        if 'cuda' in self.device:
+            torch.cuda.manual_seed(self.seed)
+            torch.cuda.manual_seed_all(self.seed)
         torch.backends.cudnn.benchmark = False
         torch.backends.cudnn.deterministic = True
 
