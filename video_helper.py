@@ -14,11 +14,12 @@ from kts.cpd_auto import cpd_auto
 
 class FeatureExtractor(object):
     def __init__(self, device):
+        self.device = device
         self.transforms = GoogLeNet_Weights.IMAGENET1K_V1.transforms()
         weights = GoogLeNet_Weights.IMAGENET1K_V1
         self.model = models.googlenet(weights=weights)
         self.model = nn.Sequential(*list(self.model.children())[:-2])
-        self.model.to(device)
+        self.model.to(self.device)
         self.model.eval()
 
     def run(self, img: np.ndarray):
@@ -26,7 +27,8 @@ class FeatureExtractor(object):
         img = self.transforms(img)
         batch = img.unsqueeze(0)
         with torch.no_grad():
-            feat = self.model(batch.cuda())
+            batch = batch.to(self.device)
+            feat = self.model(batch)
             feat = feat.squeeze()
 
         assert feat.shape == (1024,), f'Invalid feature shape {feat.shape}: expected 1024'
