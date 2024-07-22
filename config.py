@@ -26,8 +26,7 @@ class Config(object):
         for k, v in kwargs.items():
             setattr(self, k, v)
 
-        # self.datasets = ['SumMe','TVSum']
-        self.datasets = ['SumMe']
+        self.datasets = ['SumMe','TVSum']
         self.SumMe_len = 25
         self.TVSum_len = 50
 
