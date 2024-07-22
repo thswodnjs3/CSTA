@@ -2,11 +2,6 @@ import math
 import torch
 import torch.nn as nn
 
-if not torch.cuda.is_available():
-    device = torch.device('cpu')
-else:
-    device = torch.device('cuda:0')
-
 class FixedPositionalEncoding(nn.Module):
     def __init__(self, Positional_encoding_shape, dim=1024, max_len=5000, freq=10000.0):
         super(FixedPositionalEncoding, self).__init__()
@@ -81,7 +76,7 @@ class RelativePositionalEncoding(nn.Module):
             pass
         else:
             raise
-        return x + pe[:x.shape[0]].to(device)
+        return x + pe[:x.shape[0]].to(x.device)
 
 class LearnablePositionalEncoding(nn.Module):
     def __init__(self, Positional_encoding_shape, dim=1024, max_len=5000):
