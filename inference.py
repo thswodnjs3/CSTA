@@ -9,13 +9,6 @@ from generate_summary import generate_summary
 from model import set_model
 from utils import report_params,get_gt
 
-# Check the usage of GPU
-if not torch.cuda.is_available():
-    print("GPU not available!")
-    device = torch.device('cpu')
-else:
-    device = torch.device('cuda:0')
-
 # Load configurations
 config = get_config()
 
@@ -63,14 +56,14 @@ for dataset in config.datasets:
             Layernorm=config.Layernorm
         )
         model.load_state_dict(torch.load(f'./weights/{dataset}/split{split_id+1}.pt'))
-        model.to(device)
+        model.to(config.device)
         model.eval()
 
         kendalls = []
         spears = []
         with torch.no_grad():
             for feature,_,dataset_name,video_num in test_loader:
-                feature = feature.to(device)
+                feature = feature.to(config.device)
                 output = model(feature)
 
                 with h5py.File(f'./data/eccv16_dataset_{dataset_name.lower()}_google_pool5.h5','r') as hdf:
