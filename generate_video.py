@@ -76,7 +76,7 @@ def main():
         Skip_connection=config.Skip_connection,
         Layernorm=config.Layernorm
     )
-    model.load_state_dict(torch.load(config.weight_path))
+    model.load_state_dict(torch.load(config.weight_path, map_location='cpu'))
     model.to(config.device)
     model.eval()
 
