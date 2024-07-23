@@ -55,7 +55,7 @@ for dataset in config.datasets:
             Skip_connection=config.Skip_connection,
             Layernorm=config.Layernorm
         )
-        model.load_state_dict(torch.load(f'./weights/{dataset}/split{split_id+1}.pt'))
+        model.load_state_dict(torch.load(f'./weights/{dataset}/split{split_id+1}.pt', map_location='cpu'))
         model.to(config.device)
         model.eval()
 
