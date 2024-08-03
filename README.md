@@ -137,7 +137,7 @@ python generate_video.py --input_is_file False --dir_path './videos' --ext 'mp4'
 python generate_video.py --input_is_file True --file_path './videos/Jumps.mp4' --save_path './summary_videos' --weight_path './weights/SumMe/split4.pt'
 ```
 The explanation of the arguments is as follows. <br/>
-If you change the 'ext' argument and input a directory of videos, you must modify the 'fourcc' variable in the 'produce_video' function within the 'generate_video.py' file. <br/>
+If you change the 'ext' argument and input a directory of videos, you must modify the ['fourcc'](https://github.com/thswodnjs3/CSTA/blob/7227ee36a460b0bdc4aa83cb446223779365df45/generate_video.py#L34) variable in the 'produce_video' function within the 'generate_video.py' file. <br/>
 Additionally, you must update this when inputting a single video file with different extensions other than 'mp4'.
 ```
 1. input_is_file (bool): True or False
