@@ -2,7 +2,7 @@
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/csta-cnn-based-spatiotemporal-attention-for/supervised-video-summarization-on-summe)](https://paperswithcode.com/sota/supervised-video-summarization-on-summe?p=csta-cnn-based-spatiotemporal-attention-for) <br/>
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/csta-cnn-based-spatiotemporal-attention-for/supervised-video-summarization-on-tvsum)](https://paperswithcode.com/sota/supervised-video-summarization-on-tvsum?p=csta-cnn-based-spatiotemporal-attention-for) <br/>
 
-The official code of "[CSTA: CNN-based Spatiotemporal Attention for Video Summarization](https://openaccess.thecvf.com/content/CVPR2024/papers/Son_CSTA_CNN-based_Spatiotemporal_Attention_for_Video_Summarization_CVPR_2024_paper.pdf)" <br/>
+The official code of "CSTA: CNN-based Spatiotemporal Attention for Video Summarization" [[paper](https://openaccess.thecvf.com/content/CVPR2024/papers/Son_CSTA_CNN-based_Spatiotemporal_Attention_for_Video_Summarization_CVPR_2024_paper.pdf)] [[arXiv](https://arxiv.org/pdf/2405.11905)] <br/>
 ![image](https://github.com/thswodnjs3/CSTA/assets/93433004/aa0dff4d-9b29-49a2-989a-5b6a12dba5fe)
 
  * [Model overview](https://github.com/thswodnjs3/CSTA?tab=readme-ov-file#model-overview)
