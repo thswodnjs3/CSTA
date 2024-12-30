@@ -1,5 +1,6 @@
 import numpy as np
 
+from tqdm import tqdm
 
 def calc_scatters(K):
     """Calculate scatter matrix: scatters[i,j] = {scatter of the sequence with
@@ -68,8 +69,8 @@ def cpd_nonlin(K, ncp, lmin=1, lmax=100000, backtrack=True, verbose=True,
     else:
         p = np.zeros((1, 1), dtype=int)
 
-    for k in range(1, m + 1):
-        for l in range((k + 1) * lmin, n + 1):
+    for k in tqdm(range(1, m + 1), ncols = 90, total = m, desc = 'KTS outer', leave = False):
+        for l in tqdm(range((k + 1) * lmin, n + 1), ncols = 90, total = n + 1 - ((k + 1) * lmin), desc = 'KTS inner', leave = False):
             tmin = max(k * lmin, l - lmax)
             tmax = l - lmin + 1
             c = J[tmin:tmax, l - 1].reshape(-1) + \
@@ -83,7 +84,7 @@ def cpd_nonlin(K, ncp, lmin=1, lmax=100000, backtrack=True, verbose=True,
 
     if backtrack:
         cur = n
-        for k in range(m, 0, -1):
+        for k in tqdm(range(m, 0, -1), ncols = 90, total = m, desc = 'KTS final', leave = False):
             cps[k - 1] = p[k, cur]
             cur = cps[k - 1]
 
