@@ -16,16 +16,20 @@ def pick_frames(video_path, selections):
     frames = []
     n_frames = 0
 
-    while True:
-        ret, frame = cap.read()
+    with tqdm(total = len(selections), ncols=90, desc = "selecting frames", unit='frame', leave = False) as pbar:
+        while True:
+            ret, frame = cap.read()
 
-        if not ret:
-            break
+            if not ret:
+                break
+            
+            if selections[n_frames]:
+                frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+                frames.append(frame)
+            n_frames += 1
+
+            pbar.update(1)
         
-        if selections[n_frames]:
-            frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-            frames.append(frame)
-        n_frames += 1
     cap.release()
 
     return frames
@@ -33,7 +37,7 @@ def pick_frames(video_path, selections):
 def produce_video(save_path, frames, fps, frame_size):
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')
     out = cv2.VideoWriter(save_path, fourcc, fps, frame_size)
-    for frame in frames:
+    for frame in tqdm(frames, total = len(frames), ncols=90, desc = "generating videos", leave = False):
         frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         out.write(frame)
     out.release()
