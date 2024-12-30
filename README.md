@@ -27,7 +27,8 @@ The official code of "CSTA: CNN-based Spatiotemporal Attention for Video Summari
  * [2024.07.18] Upload the code to generate summary videos, including custom videos.
  * [2024.07.21] Update the KTS code for full frames of videos.
  * [2024.07.23] Update the code to use only the CPU.
- * (Yet) [2024.09.??] Add detailed explanations and comments for the code.
+ * [2024.12.30] Add tqdm to see the progress generating summary videos
+ * (Yet) [2025.01.??] Add detailed explanations and comments for the code.
 
 [Back to top](https://github.com/thswodnjs3/CSTA?tab=readme-ov-file#csta-cnn-based-spatiotemporal-attention-for-video-summarization-cvpr-2024-paper)↑
 
