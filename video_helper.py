@@ -9,6 +9,7 @@ from pathlib import Path
 from PIL import Image
 from torchvision import transforms, models
 from torchvision.models import GoogLeNet_Weights
+from tqdm import tqdm
 
 from kts.cpd_auto import cpd_auto
 
@@ -53,17 +54,20 @@ class VideoPreprocessor(object):
         features = []
         n_frames = 0
 
-        while True:
-            ret, frame = cap.read()
+        total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
+        with tqdm(total = total_frames, ncols=90, desc = "getting features", unit='frame', leave=False) as pbar:
+            while True:
+                ret, frame = cap.read()
 
-            if not ret:
-                break
+                if not ret:
+                    break
 
-            frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-            feat = self.model.run(frame)
-            features.append(feat)
-                
-            n_frames += 1
+                frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+                feat = self.model.run(frame)
+                features.append(feat)
+                    
+                n_frames += 1
+                pbar.update(1)
 
         cap.release()
         features = torch.stack(features)
@@ -72,7 +76,6 @@ class VideoPreprocessor(object):
     def kts(self, n_frames, features):
         seq_len = len(features)
         picks = np.arange(0, seq_len)
-
         # compute change points using KTS
         kernel = np.matmul(features.clone().detach().cpu().numpy(), features.clone().detach().cpu().numpy().T)
         change_points, _ = cpd_auto(kernel, seq_len - 1, 1, verbose=False)
