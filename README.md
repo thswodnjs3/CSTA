@@ -52,7 +52,8 @@ pip install -r requirements.txt
 [Back to top](https://github.com/thswodnjs3/CSTA?tab=readme-ov-file#csta-cnn-based-spatiotemporal-attention-for-video-summarization-cvpr-2024-paper)↑
 
 # Data
-Link: [Dataset](https://drive.google.com/drive/folders/1iGfKZxexQfOxyIaOWhfU0P687dJq_KWF?usp=drive_link) <br/>
+~~Link: [Dataset](https://drive.google.com/drive/folders/1iGfKZxexQfOxyIaOWhfU0P687dJq_KWF?usp=drive_link) <br/>~~
+ - I'm very sorry, but the dataset is no longer available. You can download it [here (PGL-SUM).](https://github.com/e-apostolidis/PGL-SUM) <br/> <br/>
 H5py format of two benchmark video summarization preprocessed datasets (SumMe, TVSum). <br/>
 You should download datasets and put them in ```data/``` directory. <br/>
 The structure of the directory must be like below. <br/>
@@ -69,7 +70,11 @@ You can see the details of both datasets below. <br/>
 [Back to top](https://github.com/thswodnjs3/CSTA?tab=readme-ov-file#csta-cnn-based-spatiotemporal-attention-for-video-summarization-cvpr-2024-paper)↑
 
 # Pre-trained models
-Link: [Weights](https://drive.google.com/drive/folders/1Z0WV_IJAHXV16sAGW7TmC9J_iFZQ9NSs?usp=drive_link) <br/>
+~~Link: [Weights](https://drive.google.com/drive/folders/1Z0WV_IJAHXV16sAGW7TmC9J_iFZQ9NSs?usp=drive_link)~~ <br/>
+ - I'm very sorry, but the pre-trained weights are no longer available. <br/>
+ I accidentally deleted it, but it can be implemented by using the same seed number below (123456). <br/>
+ If you can't see the similar performance with the same seed, then please contact me. <br/> <br/>
+
 You can download our pre-trained weights of CSTA. <br/>
 There are 5 weights for the SumMe dataset and the other 5 for the TVSum dataset(1 weight for each split). <br/>
 As shown in the paper, we tested everything 10 times (without fixation of seed) but only uploaded a single model as a representative for your convenience. <br/>
